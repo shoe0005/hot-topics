@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+}
+
+.clearfix {
+    overflow: auto;
+}
+.flex-container {
+    display: flex;
+    padding: 32px;
+
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column {
+    flex: auto;
+    max-width: auto;
+    padding: 0 4px;
+}
+.articles-page .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/*BODY*/
+body {
+    font-family: serif, sans-serif;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/*Header Logo*/
+.header-logo {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.header-logo img {
+    display: inline-block;
+    width: auto;
+    height: 60px;
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li {
+    padding: 1rem;
+    width: 768px;
+    background-color: black;
+}
+.navbar a {
+    background-color: black;
+    color: #3dadea;
+    text-decoration: none;
+}
+.navbar ul li a .btns {}
+.navbar ul li a:hover {
+    color: white;
+    font-family: bookman old style;
+}
+
+/*Tag-line*/
+.masthead {
+    background-color: grey;
+    text-align: center;
+    height: 80px;
+    width: auto;
+}
+.masthead h2 {
+    padding-top: 20px
+}
+
+
+/*ARTICLES-PAGE*/
+article {
+    padding: 20px;
+}
+
+article h2 {
+    text-align: center;
+}
+.article-cards-cards {
+    margin: 0;
+    margin-top: 8px;
+}
+.article-cards {
+    float: left;
+    margin: 0px 20px 15px 0px;
+}
+.article-cards figcaption {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 0 auto;
+}
+
+/*PORTFOLIO-PAGE*/
+portfolio {}
+
+portfolio h2 {
+    text-align: center;
+}
+.portfolio-cards {
+    margin: 0;
+    margin-top: 8px;
+}
+.portfolio-cards img {
+    width: 100%;
+}
+.portfolio-cards figcaption {
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+/*FOOTER*/
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    background: black;
+}
+footer .flex-container {
+    width: 100%;
+    justify-content: space-between;
+}
+
+/*Footer Logo*/
+.footer-logo {
+    padding: 20px;
+    padding-top: 40px;
+}
+.footer-logo img {
+    height: 50px;
+}
+
+/*Footer Copyright*/
+.footer-copyright {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+}
+.footer-copyright a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/*Social Media Icons*/
+.footer-sm {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+}
+.fa {
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+.fa:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-facebook {
+    background: #3dadea;
+    color: white;
+}
+.fa-twitter {
+    background: #3dadea;
+    color: white;
+}
+.fa-instagram {
+    background: #3dadea;
+    color: white;
+}
+
+
+/*MEDIA QUERIES*/
+
+/* Extra Small Devices, Phones (560px) */
+@media only screen and (min-width: 35rem) {
+    /*.flex-container {padding: 0;}  */
+    h3 {
+        text-align: center;
+    }
+    
+    /*PORTFOLIO-PAGE*/
+    /*parent class=(above figure)*/
+    .portfolio-page {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    /*figure class=*/
+    .portfolio-cards {
+        text-align: center;
+        width: 45%;
+    }
+}
+
+/*RUBRIC INFO*/
+/*Entire content is aligned center and it takes full-width of view-port. Only element aligned left is the text of paragraph in main content.*/
+
+/* Small Devices, Tablets (768px) */
+@media only screen and (min-width: 48rem) {
+    /*NAVBAR*/
+    .navbar {
+        display: inline;
+        justify-content: space-evenly;
+    }
+    .navbar ul {
+        display: flex;
+        /*flex-wrap:nowrap;*/
+        justify-content: space-evenly;
+    }
+    .navbar ul li {
+        width: 200px;
+    }
+
+}
+
+/*RUBRIC INFO*/
+/*Entire content is still aligned center. Nav-bar is centered and nav-bar items are displayed in one row. The image in main content and corresponding paragraph are also displayed in one row. Image takes 40%, and text takes 60% of screen-width.*/
+
+/* Medium Devices, Desktops (992px)*/
+@media only screen and (min-width: 62rem) {}
+
+/* Large Devices, Wide Screens  (1,280px) */
+@media only screen and (min-width: 80rem) {
+    
+    /*HEADER*/
+    .header-logo,
+    .navbar ul li {
+        align-content: flex-start;
+    }
+    .masthead h1 {
+        text-align: left;
+        margin-left: 100px;
+    }
+
+    /*ARTICLES-PAGE*/
+    article {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .articles-page {
+        align-content: center;
+        float: right;
+    }
+    article h2 {
+        text-align: left;
+        /*margin-left: 46px;*/
+    }
+    article img {
+        width: 50%;
+    }
+    .text p {
+        align-content: right;
+        justify-content: flex-end;
+    }
+
+    /*PORTFOLIO-PAGE*/
+    /*figure class=*/
+    portfolio h2 {
+        text-align: left;
+        margin-left: 72px;
+    }
+    .portfolio-cards {
+        width: 30%;
+    }
+    .portfolio-cards img {
+        width: 80%;
+    }
+}
+
+/*RUBRIC INFO*/
+/*Entire content is aligned left. Image in the main content takes 40% of screen-width, and text takes 60% of screen-width. Second and third article are set in one row taking 50% of screen width each.*/
+
+/* Extra Large Devices, Wide Screens (1,440px-1,600px) */
+@media only screen and (min-width: 90rem max-width:100rem) {}
